@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from 'yup';
 
@@ -10,12 +10,21 @@ const validationSchema = yup.object().shape(
     }
 );
 
+const initialFormValues = {
+    name: '',
+    email: '',
+    password: '',
+    tos: false
+}
+
 export default function FormContainer(props) {
     //props
   return (
     <Formik
       //props
+      onSubmit={props.onSubmit}
       validationSchema={validationSchema}
+      initialValues={initialFormValues}
       render={props => {
         return (
           <Form>
