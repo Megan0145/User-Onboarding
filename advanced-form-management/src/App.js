@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import FormContainer from "./Form";
-import Users from './Users';
+import Users from "./Users";
 import axios from "axios";
 
 const usersAPI = "https://reqres.in/api/users";
@@ -18,20 +18,22 @@ function App() {
         password: values.password,
         tos: values.tos
       })
-      .then( response => {
+      .then(response => {
         setUserList(userList.concat(response.data));
         actions.resetForm();
       })
-      .catch( error => {
-       setServerError(serverError + error.message);
+      .catch(error => {
+        setServerError(serverError + error.message);
       });
   };
 
   return (
     <div className="App">
       {serverError}
-      <FormContainer onSubmit={addUser} />
-      <Users userList={userList} />
+      <div className="container">
+        <FormContainer onSubmit={addUser} />
+        <Users userList={userList} />
+      </div>
     </div>
   );
 }
