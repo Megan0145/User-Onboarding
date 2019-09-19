@@ -1,10 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as yup from 'yup';
 
-export default function FormContainer() {
+const validationSchema = yup.object().shape(
+    {
+        name: yup.string().required('You must provide a name'),
+        email: yup.string().email('email not valid').required('You must provide an email'),
+        password: yup.string().min(10, 'Password must be 10+ characters').required('Password is required')
+    }
+);
+
+export default function FormContainer(props) {
+    //props
   return (
     <Formik
       //props
+      validationSchema={validationSchema}
       render={props => {
         return (
           <Form>
