@@ -16,9 +16,11 @@ function App() {
         name: values.name,
         email: values.email,
         password: values.password,
+        role: values.role,
         tos: values.tos
       })
       .then(response => {
+        console.log(response.data)
         setUserList(userList.concat(response.data));
         actions.resetForm();
       })
