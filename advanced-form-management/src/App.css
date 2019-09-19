@@ -44,3 +44,15 @@ h1 {
   font-size: 20px;
   border-radius: 10px;
 }
+.error {
+  margin-top: 10px;
+  color: red;
+}
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user h3 {
+  margin:10px;
+}

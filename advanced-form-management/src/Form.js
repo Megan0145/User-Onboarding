@@ -34,21 +34,21 @@ export default function FormContainer(props) {
               <label>
                 Name:
                 <Field name="name" type="text" />
-                <ErrorMessage name='name' component='div' />
+                <ErrorMessage name='name' component='div' className='error'/>
               </label>
             </div>
             <div className='formRow'>
               <label>
                 Email:
                 <Field name="email" type="email" />
-                <ErrorMessage name='email' component='div' />
+                <ErrorMessage name='email' component='div' className='error' />
               </label>
             </div>
             <div className='formRow'>
             <label>
                 Password:
                 <Field name="password" type="password" />
-                <ErrorMessage name='password' component='div' />
+                <ErrorMessage name='password' component='div' className='error'/>
               </label>
             </div>
             <div>

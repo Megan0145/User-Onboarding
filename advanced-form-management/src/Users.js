@@ -8,7 +8,7 @@ export default function Users(props) {
       {userList.length
         ? userList.map(user => (
             <div key={user.name} className='user'>
-              User: {user.name} Email: {user.email}
+              <h3>User:</h3> {user.name} <h3>  Email:</h3> {user.email}
             </div>
           ))
         : "No users registered yet"}
