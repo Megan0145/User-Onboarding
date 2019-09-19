@@ -30,7 +30,7 @@ export default function FormContainer(props) {
       initialValues={initialFormValues}
       onSubmit={props.onSubmit}
       render={props => {
-        console.log(props);
+        console.log(props.values.tos);
         return (
           <Form>
             <h1>Sign Up</h1>
@@ -74,7 +74,7 @@ export default function FormContainer(props) {
                 Please Agree to Terms Of Service
                 <Field name="tos" type="checkbox" checked={props.values.tos} />
                 <ErrorMessage name="tos" component="div" />
-                {!props.values.tos && <div> ^^^ </div>}
+                {/* {!props.values.tos && <div> ^^^ </div>} */}
               </label>
             </div>
             <button type="submit">Submit</button>
