@@ -1,0 +1,58 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(to right, #e65c00, #f9d423);
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  color: #5a5a5a;
+}
+.container {
+  background-color: white;
+  width: 50vw;
+  box-shadow: 5px 5px #bdbdbd;
+  padding-bottom: 3rem;
+}
+h1 {
+  font-size: 2.5rem;
+}
+
+.formRow {
+  margin-bottom: 10px;
+
+}
+.formRow label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+}
+.formRow input {
+  margin-top: 10px;
+  width: 75%;
+  height: 20px;
+  text-align: center;
+}
+ button {
+  width: 25%;
+  margin-top: 10px;
+  height: 30px;
+  background-color: #419e69;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.error {
+  margin-top: 10px;
+  color: red;
+}
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user h3 {
+  margin:10px;
+}
